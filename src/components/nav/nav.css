@@ -1,0 +1,48 @@
+.nav-bar {
+    align-items: right;
+}
+  
+.nav-bar-list {
+    /* outline: 2px solid blue; */
+    text-align: right;
+}
+
+.nav-link {
+    color: black;
+    /* outline: 2px solid red; */
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    line-height:10px;
+    padding: 10px;
+}
+
+.nav-bar-element:hover .underline {
+    width: 100%;
+    visibility: visible;
+}
+
+.nav-bar-element {
+    width: fit-content;
+    margin-left: auto;
+    display: inline-block;
+    line-height: 0;
+    /* outline: 1px solid green; */
+}
+
+.underline {
+    height: 2px;
+    background: gray;
+    width: 1%;
+    display: inline-block;
+    visibility: hidden;
+    /* -webkit-transition: width .2s ease-in-out; */
+    /* -moz-transition: width .2s ease-in-out; */
+    /* -o-transition: width .2s ease-in-out; */
+    transition: width .2s ease-in-out;
+}
+
+.nav-bar-element:hover {
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}

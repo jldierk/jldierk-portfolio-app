@@ -1,4 +1,4 @@
-import NavBar from "../NavBar";
+import NavBar from "../components/nav/NavBar";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 export default function About() {

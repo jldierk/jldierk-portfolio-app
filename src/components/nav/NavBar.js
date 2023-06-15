@@ -1,3 +1,4 @@
+import './nav.css'
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 function NavBar() {
@@ -19,8 +20,8 @@ export function NavElement(props) {
     <span className="nav-bar-element">
         <Link className="nav-link" to={props.location}>
           {props.linkText}
+          <span className="underline"/>
         </Link>
-        <span className="underline"/>
     </span>
   )
 }

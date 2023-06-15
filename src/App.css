@@ -38,3 +38,9 @@
     transform: rotate(720deg);
   }
 }
+
+@font-face {
+  font-family: "heyAugust";   /*Can be any text*/
+  src: local("heyAugust"),
+    url("./fonts/heyAugust.ttf") format("truetype");
+}
