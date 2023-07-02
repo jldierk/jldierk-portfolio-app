@@ -6,6 +6,7 @@ export default function About() {
         <main>
             <div>
                 <p>About me</p>
+                <btn>Test Button</btn>
             </div>
         </main>
     );

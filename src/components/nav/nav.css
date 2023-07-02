@@ -1,10 +1,20 @@
 .nav-bar {
-    align-items: right;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: fit-content;
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
 }
   
 .nav-bar-list {
     /* outline: 2px solid blue; */
     text-align: right;
+    display: inline-block;
+    width: fit-content;
 }
 
 .nav-link {
@@ -25,9 +35,10 @@
 
 .nav-bar-element {
     width: fit-content;
-    margin-left: auto;
+    /* margin-left: auto; */
     display: inline-block;
-    line-height: 0;
+    text-align: right;
+    margin: 5px;
     /* outline: 1px solid green; */
 }
 
