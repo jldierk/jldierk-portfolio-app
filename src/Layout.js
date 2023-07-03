@@ -5,8 +5,11 @@ import NavBar from "./components/nav/NavBar";
 const Layout = () => {
     return(
         <>
-            <NavBar/>
+            {/* <NavBar/> */}
             <Outlet/>
+            <div className='footer'>
+                Created with React, and hosted on AWS using a static S3 bucket.
+            </div>
         </>
     );
 };

@@ -1,6 +1,6 @@
 :root {
-  --primarycolor: #0e0e17;
-  --secondarycolor: #55c0db;
+  --primarycolor: #0a0825;
+  --secondarycolor: #59eacd;
   --textcolor: #dbdbe7;
 }
 
@@ -9,15 +9,41 @@
   margin: 0px;
 }
 
+h1 {
+  font-size: 100px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   margin: 0;--tw-bg-opacity: 1;
-  background-color: rgb(15 23 42/var(--tw-bg-opacity));
+  /* background: radial-gradient(at top right, #371b5d, var(--primarycolor)); */
   color: var(--textcolor);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* animation: gradient 15s ease infinite; */
+	background: radial-gradient(at top 25% right 25%, #371b5d, var(--primarycolor));
+	/* background-size: 400% 400%; */
+	animation: gradient 5s ease infinite;
+	/* height: 100vh; */
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 100% 100%;
+	}
+	50% {
+		background-position: 50% 50%;
+	}
+	100% {
+		background-position: 100% 100%;
+	}
 }
 
 code {
@@ -79,6 +105,11 @@ btn:hover {
   border-top: 1px solid #7b7b8f00;
 }
 
+.about {
+  padding-top: 5px;
+  padding: 20px;
+}
+
 .sample-project:hover, .experience-block:hover {
   opacity: 1.0;
   border-top: 1px solid #7b7b8f;
@@ -106,4 +137,15 @@ btn:hover {
 .section:hover {
   opacity: 1;
   transition: all .5s ease;
+}
+
+.footer {
+  font-size: 10px;
+  margin: 40px;
+  text-align: right;
+}
+
+.external-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--secondarycolor);
 }
