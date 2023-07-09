@@ -4,6 +4,12 @@
     url("./fonts/heyAugust.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "poppins";   /*Can be any text*/
+  src: local("poppins"),
+    url("./fonts/Poppins-Regular.ttf") format("truetype");
+}
+
 /* Stuff that came with React */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -10,15 +10,55 @@ export default function Home() {
   let startDate = moment('2014-06-02');
   let now = moment();
   let yearsExperience = now.diff(startDate, 'years');
-  
+
+  function fadeOutOnScroll(element) {
+    if (!element) {
+      return;
+    }
+    
+    var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+    var elementHeight = element.offsetHeight;
+    var scrollTop = document.documentElement.scrollTop;
+    var newOpacity = 1;
+    
+    if (scrollTop > distanceToTop) {
+      let distanceScrolled = (scrollTop - distanceToTop);
+      let threshold = (elementHeight / 3); 
+      if (distanceScrolled < threshold){
+        let opacityChange = distanceScrolled / threshold;
+        if (opacityChange > 0) {
+          newOpacity = 1 - opacityChange;
+
+          if (newOpacity >= 0) {        
+            element.style.opacity = newOpacity;
+          }
+        }
+      }
+    }
+  }
+
+  function scrollHandler() {
+    var header = document.getElementById('header');
+    fadeOutOnScroll(header);
+  }   
+
+  window.addEventListener('scroll', scrollHandler);
+    
     return (
       <div className="content">
         {/* <div style={{display: "flex", alignItems: "center", justifyContent:"center", flexDirection: "column", height: "200px"}}> */}
-        <div style={{minHeight: "100vh", display: "flex", flexDirection:"column", justifyContent: "center"}}>
-          <h1>Jacob Dierksheide</h1>
-          <h2 style={{color: "var(--secondarycolor)"}}>Sofware Engineer</h2>
+        <div id="header" style={{minHeight: "100vh", display: "flex", flexDirection:"column", justifyContent: "center"}}>
+          <div style={{flex:"1", display: "flex", flexDirection:"column", justifyContent: "center", flexBasis:"0"}}>
+            {/* <p>Hi! My name is</p> */}
+            <h1>Jacob Dierksheide</h1>
+            <div style={{alignSelf:"end"}}>
+              {/* <span>And Im a </span> */}
+              <span style={{color: "var(--secondarycolor)", fontSize: "50px"}}>Sofware Engineer</span>
+            </div>
+          </div>
+          <div style={{width: "100px", height:"100px", alignSelf:"end", justifySelf:"end"}}> <a href='#about'>See more <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill='#8d8da1'><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></a> </div>
         </div> 
-        <div className="section">
+        <div id='about' className="section">
           <h2>About</h2>
           <div className="about">
             <div style={{marginBottom: "10px"}}>
@@ -27,7 +67,7 @@ export default function Home() {
               excited to learn new skills.        
             </div>
             <div style={{marginBottom: "10px"}}>
-              When not writing code I enjoy performing Improv in my new home of Chicago, as well as nerding out over the TV show <i>Survivor</i> and, of course, playing with my pet bunny Sesame.
+              When not writing code I enjoy performing Improv in my home of Chicago, as well as nerding out over the TV show <i>Survivor</i> and, of course, playing with my pet bunny Sesame.
             </div>
             <a className='external-link' href={resume} target='_blank'><b>View Full Resume</b> <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path fill="#8d8da1" d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></a>
             

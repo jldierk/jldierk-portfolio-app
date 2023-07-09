@@ -1,5 +1,5 @@
 :root {
-  --primarycolor: #0a0825;
+  --primarycolor: #040311;
   --secondarycolor: #59eacd;
   --textcolor: #dbdbe7;
 }
@@ -7,10 +7,16 @@
 * {
   padding: 0px;
   margin: 0px;
+  font-family: 'poppins';
+  scroll-behavior: smooth;
 }
 
 h1 {
   font-size: 100px;
+}
+
+h2 {
+  padding-bottom: 10px;
 }
 
 a {
@@ -28,9 +34,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* animation: gradient 15s ease infinite; */
-	background: radial-gradient(at top 25% right 25%, #371b5d, var(--primarycolor));
-	/* background-size: 400% 400%; */
-	animation: gradient 5s ease infinite;
+	/* background: radial-gradient(at top 25% right 25%, #371b5d, var(--primarycolor)); */
+	background: linear-gradient(-45deg, var(--primarycolor), #593789);
+	background-size: 150% 150%;
+	animation: gradient 10s ease infinite;
 	/* height: 100vh; */
 }
 
@@ -55,11 +62,6 @@ p {
   font-size: 14px;
   padding-top: 0px;
   padding-bottom: 0px;
-}
-
-h2 {
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .name {
@@ -101,7 +103,7 @@ btn:hover {
 
 .sample-project, .experience-block {
   padding: 20px;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   border-top: 1px solid #7b7b8f00;
 }
 
@@ -112,7 +114,7 @@ btn:hover {
 
 .sample-project:hover, .experience-block:hover {
   opacity: 1.0;
-  border-top: 1px solid #7b7b8f;
+  /* border-top: 1px solid #7b7b8f; */
   background-color: #ffffff0f;
   transition: all .5s ease;
 }
