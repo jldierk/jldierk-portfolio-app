@@ -35,7 +35,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* animation: gradient 15s ease infinite; */
 	/* background: radial-gradient(at top 25% right 25%, #371b5d, var(--primarycolor)); */
-	background: linear-gradient(-45deg, var(--primarycolor), #593789);
+	background: linear-gradient(-45deg, var(--primarycolor), #354c7b);
 	background-size: 150% 150%;
 	animation: gradient 10s ease infinite;
 	/* height: 100vh; */

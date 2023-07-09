@@ -2,7 +2,8 @@
 import { Fade } from 'react-reveal';
 import ExperienceBlock from '../components/ExperienceBlock';
 import ProjectBlock from '../components/ProjectBlock';
-import pokemonPartyAppImg from "../images/pokemonWebApp.png"
+import pokemonPartyAppImg from "../images/pokemonWebApp.png";
+import unityGameImg from "../images/gameplay.png";
 import moment, { Moment } from 'moment';
 import resume from '../files/dierksheideResume.pdf';
 
@@ -74,23 +75,27 @@ export default function Home() {
             </div>
             <a className='external-link' href={resume} target='_blank'><b>View Full Resume</b> <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path fill="#8d8da1" d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></a>                
           </div>
-          <div style={{flex: "5"}}>
-            <div id='about' className="section">
-              <h2>About</h2>
-              <div className="about">
-                <div style={{marginBottom: "10px"}}>
-                  I am a Software Engineer with over {yearsExperience} years of professional experience in the field. I am passionate about finding elegant solutions to 
-                  difficult problems. I specialize in Java development, but have been exposed to a wide variety of languages and technologies over my career, and am always
-                  excited to learn new skills.        
-                </div>
-                <div style={{marginBottom: "10px"}}>
-                  When not writing code I enjoy performing Improv in my home of Chicago, as well as nerding out over the TV show <i>Survivor</i> and, of course, playing with my pet bunny Sesame.
-                </div>                
-              </div>          
-            </div>
+          <div style={{paddingTop: "15px", flex: "5"}}>
+            <Fade bottom>
+              <div id='about' className="section">
+                <h2>About</h2>
+                <div className="about">
+                  <div style={{marginBottom: "10px"}}>
+                    I am a Software Engineer with over {yearsExperience} years of professional experience in the field. I am passionate about finding elegant solutions to 
+                    difficult problems. I specialize in Java development, but have been exposed to a wide variety of languages and technologies over my career, and am always
+                    excited to learn new skills.        
+                  </div>
+                  <div style={{marginBottom: "10px"}}>
+                    When not writing code I enjoy performing Improv in my home of Chicago, as well as nerding out over the TV show <i>Survivor</i> and, of course, playing with my pet bunny Sesame.
+                  </div>                
+                </div>          
+              </div>
+            </Fade>                  
             <div id='experience' className="section">
-              <h2>Experience</h2>
-              <ExperienceBlock company="Benefitfocus, Inc." years="2014 - Present" skills={['Java 8', 'Spring Boot', 'Spring Batch', 'Oracle SQL', 'Drools']}>
+              <Fade bottom>
+                <h2>Experience</h2>
+              </Fade>
+              <ExperienceBlock company="Benefitfocus, Inc." years="2014 - Present" skills={['Java 8', 'Spring Boot', 'Spring Batch', 'Oracle SQL', 'JAX-RS', 'Swagger', 'Drools']}>
                 Tech Lead of the Payroll team. Developed API integrations with our partnering Payroll Bureaus to support bidirectional data feeds.
               </ExperienceBlock>
               <ExperienceBlock company="College of Charleston" years="2013" skills={['Python', 'Galaxy', 'R', 'Google App Engine']}>
@@ -102,12 +107,14 @@ export default function Home() {
               </ExperienceBlock>          
             </div>   
             <div id='sample-projects' className="section">
-              <h2>Sample Projects</h2>        
-              <ProjectBlock projectName="Pokemon Party Builder" imageSrc={pokemonPartyAppImg} skills={['React', 'Spring Boot', 'MongoDB']} projectLink="http://jldierk.com">
+              <Fade bottom>
+                <h2>Sample Projects</h2>        
+              </Fade>              
+              <ProjectBlock projectName="Pokemon Party Creator" imageSrc={pokemonPartyAppImg} skills={['React', 'Spring Boot', 'MongoDB']} projectLink="http://jldierk.com">
                 A responsive web application allowing users to assemble a party of Pokemon and get analysis on the strength and optimal movesets for that party.
               </ProjectBlock>
-              <ProjectBlock projectName="Unity 2D Game" imageSrc={pokemonPartyAppImg} skills={['C#', 'Unity']} projectLink="http://jldierk.com">
-                For the past year I have been working on a 2D Top-Down game in Unity in my spare time. This project have given me lots of opportunities to sharpen my skills with 
+              <ProjectBlock projectName="Unity 2D Game" imageSrc={unityGameImg} skills={['C#', 'Unity', 'Aesprite']} projectLink="http://jldierk.com">
+                An in-progress 2D Top-Down game in developed using the Unity engine. This project have given me lots of opportunities to sharpen my skills with 
                 other programming languages as well as challenged me to think about system design in new and interesting ways related to gameplay patterns.
               </ProjectBlock>
             </div>
