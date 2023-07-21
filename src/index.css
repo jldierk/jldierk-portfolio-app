@@ -24,6 +24,11 @@ a {
   color: inherit;
 }
 
+p {
+  font-size: 14px;
+  padding: 5px 0px 5px 0px;
+}
+
 body {
   margin: 0;--tw-bg-opacity: 1;
   /* background: radial-gradient(at top right, #371b5d, var(--primarycolor)); */
@@ -56,12 +61,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-p {
-  font-size: 14px;
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
 
 .name {
@@ -115,7 +114,7 @@ btn:hover {
 .sample-project:hover, .experience-block:hover {
   opacity: 1.0;
   /* border-top: 1px solid #7b7b8f; */
-  background-color: #ffffff0f;
+  background-color: #ffffff07;
   transition: all .5s ease;
 }
 
@@ -128,12 +127,16 @@ btn:hover {
   font-size: 12px;
 }
 
+.svg-link {
+  margin: 5px
+}
+
 .svg-link:hover .path-main {
   fill: #dbdbe7;
 }
 
 .section {
-  opacity: .7;
+  opacity: .5;
 }
 
 .section:hover {
@@ -147,7 +150,23 @@ btn:hover {
   text-align: right;
 }
 
+.external-link {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
 .external-link:hover {
   text-decoration: underline;
   text-decoration-color: var(--secondarycolor);
+}
+
+#nav-link {
+  opacity: .5;
+  font-size: 20px;
+  transition: all .5s ease;
+}
+
+#nav-link.active {
+  opacity: 1;
+  font-size: 30px;
 }

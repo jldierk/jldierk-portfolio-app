@@ -7,8 +7,10 @@ function ProjectBlock(props) {
             <div className="sample-project" style={{display: "flex", flexDirection: "column"}}>
                 <h4>{props.projectName}</h4>
                 <div style={{display:"flex"}}>
-                    <div className="project-image" style={{flex: 1, margin: "5px"}}>                    
-                        <img style={{width: "180px", height:"100px", margin: "10px 0px 10px 0px"}} src={props.imageSrc}/>
+                    <div className="project-image" style={{flex: 1, margin: "5px"}}>   
+                        <a href={props.projectLink}>
+                            <img style={{width: "180px", height:"100px", margin: "10px 0px 10px 0px"}} src={props.imageSrc}/>
+                        </a>                 
                     </div>
                     <div className="project-desc" style={{flex: 5, margin: "5px"}}>                    
                         <p>
