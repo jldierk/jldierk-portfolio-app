@@ -9,7 +9,7 @@ function ProjectBlock(props) {
                 <div style={{display:"flex"}}>
                     <div className="project-image" style={{flex: 1, margin: "5px"}}>   
                         <a href={props.projectLink}>
-                            <img style={{width: "180px", height:"100px", margin: "10px 0px 10px 0px"}} src={props.imageSrc}/>
+                            <img style={{width: "180px", height:"100px", margin: "10px 0px 10px 0px", borderRadius:"5px", border:"2px solid white"}} src={props.imageSrc}/>
                         </a>                 
                     </div>
                     <div className="project-desc" style={{flex: 5, margin: "5px"}}>                    

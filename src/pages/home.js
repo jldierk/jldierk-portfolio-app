@@ -47,7 +47,7 @@ export default function Home() {
 
   function handleNavChange(intersections) {
     var section = intersections[0];
-    if (section.intersectionRatio >= 0.6) {      
+    if (section.intersectionRatio >= 0.7) {      
       setCurrSection(section.target.id);
     }
   }
@@ -60,7 +60,7 @@ export default function Home() {
     }
   }, [])
   
-  var observer = new IntersectionObserver(handleNavChange, {threshold: .6});
+  var observer = new IntersectionObserver(handleNavChange, {threshold: .7});
     
     return (
       <div className="content">
@@ -78,16 +78,17 @@ export default function Home() {
         <div style={{height:"50vh"}}/>
         <div id="details" style={{display: "flex"}}>
           <div style={{flex:"2", fontSize: "20px", textAlign: "Left", position: "-webkit-sticky", position: "sticky", alignSelf: "flex-start", top:"0px", padding:"50px 20px 20px 20px"}}>
-            <div id="nav-link" className={`${currSection == "about" ? "active" : ""}`}><a href="#about">About</a></div>
-            <div id="nav-link" className={`${currSection == "experience" ? "active" : ""}`}><a href="#experience">Experience</a></div>
-            <div id="nav-link" className={`${currSection == "sample-projects" ? "active" : ""}`}><a href="#sample-projects">Sample Projects</a></div>
-            <div style={{height:"100px"}}></div>
+            <div>              
+              <div id="nav-link" className={`${currSection == "about" ? "active" : ""}`}><a href="#about">About</a></div>
+              <div id="nav-link" className={`${currSection == "experience" ? "active" : ""}`}><a href="#experience">Experience</a></div>
+              <div id="nav-link" className={`${currSection == "sample-projects" ? "active" : ""}`}><a href="#sample-projects">Sample Projects</a></div>
+            </div>
             <div style={{display: "flex", width: "100px", justifyContent: "space-evenly", marginTop: "10px"}}>
               <a className='svg-link' href='https://github.com/jldierk' target='_blank'><GitHubSVG/></a>
               <a className='svg-link' href='https://www.linkedin.com/in/jacob-dierksheide-b1268091' target='_blank'><LinkedInSVG/></a>
               <a className='svg-link' href='mailto:jldierk@gmail.com'><MailSVG/></a>
             </div>
-            <a className='external-link' href={resume} target='_blank'><b>View Full Resume</b><ExternalLinkSVG/></a>                
+            <a className='external-link' style={{fontSize: "15px"}} href={resume} target='_blank'><b>View Full Resume</b><ExternalLinkSVG/></a>                
           </div>
           <div style={{paddingTop: "15px", flex: "5"}}>
             <div id="about" className="section">
@@ -135,15 +136,14 @@ export default function Home() {
                   A web application allowing users to assemble a party of Pokemon and automatically generate an optimal set of moves for those pokemon based on their strengths and the makeup of the rest of the Party.
                 </div>
                 <div style={{margin: "5px 0px 5px 0px"}}>
-                  <a class="external-link" href='https://jldierk.github.io/pokemon-client'>
-                    <LinkSVG/> See it in action
-                  </a>
                   <div>
-                    Explore the                   
-                    <a class="external-link" href='https://github.com/jldierk/pokemon-client'><LinkSVG/>font-end</a>
-                    or
-                    <a class="external-link" href='https://github.com/jldierk/pokemon-party-app'><LinkSVG/>back-end</a>
-                    code
+                    <a class="external-link" href='https://jldierk.github.io/pokemon-client'><LinkSVG/> See it in action</a>
+                  </div>
+                  <div>
+                    <a class="external-link" href='https://github.com/jldierk/pokemon-client'><LinkSVG/>Explore the font-end</a>
+                  </div>
+                  <div>
+                    <a class="external-link" href='https://github.com/jldierk/pokemon-party-app'><LinkSVG/>Check out the back-end</a>
                   </div>
                 </div>                
               </ProjectBlock>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router";
 import NavBar from "./components/nav/NavBar";
+import { ExternalLinkSVG } from "./components/svgs/commonSVGs";
 
 const Layout = () => {
     return(
@@ -8,7 +9,7 @@ const Layout = () => {
             {/* <NavBar/> */}
             <Outlet/>
             <div className='footer'>
-                Created with React, and hosted on AWS using a static S3 bucket.
+                This website was created with React. View the source code <a className='external-link' href="https://github.com/jldierk/jldierk-portfolio-app" target='_blank'><b>here</b><ExternalLinkSVG/></a>                            
             </div>
         </>
     );
